@@ -1,10 +1,10 @@
-/* eslint-disable no-unused-vars */
-import EventHero from "@components/features/EventHero";
-import EventOverview from "@components/features/EventOverview";
-import { motion } from "framer-motion";
-import { useAuthStore } from "../stores/authStore";
+import { motion } from 'framer-motion';
 
-const Home = () => {
+import EventHero from '@components/features/EventHero';
+import EventOverview from '@components/features/EventOverview';
+import { useAuthStore } from '@stores/authStore';
+
+export default function HomePage() {
   const { isLoggedIn } = useAuthStore();
 
   return (
@@ -19,6 +19,4 @@ const Home = () => {
       {isLoggedIn() && <EventOverview />}
     </motion.div>
   );
-};
-
-export default Home;
+}

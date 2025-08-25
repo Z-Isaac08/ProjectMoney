@@ -6,8 +6,9 @@ import { useAuthStore } from "./stores/authStore";
 
 // Pages dynamiques
 const HomePage = lazy(() => import("@pages/HomePage"));
-const LibraryPage = lazy(() => import("@pages/LibraryPage"));
-const MyBooksPage = lazy(() => import("@pages/MyBooksPage"));
+// LIBRARY ROUTES COMMENTED OUT FOR MVP
+// const LibraryPage = lazy(() => import("@pages/LibraryPage"));
+// const MyBooksPage = lazy(() => import("@pages/MyBooksPage"));
 const AdminDashboard = lazy(() => import("@pages/AdminDashboard"));
 
 const AppContent = () => {
@@ -39,8 +40,9 @@ const AppContent = () => {
         <Routes>
           {/* Routes avec layout */}
           <Route path="/" element={<Layout><HomePage /></Layout>} />
-          <Route path="/librairie" element={<Layout><LibraryPage /></Layout>} />
-          <Route path="/mes-livres" element={<Layout><MyBooksPage /></Layout>} />
+          {/* LIBRARY ROUTES COMMENTED OUT FOR MVP */}
+          {/* <Route path="/librairie" element={<Layout><LibraryPage /></Layout>} /> */}
+          {/* <Route path="/mes-livres" element={<Layout><MyBooksPage /></Layout>} /> */}
           
           {/* Route admin sans layout */}
           <Route path="/admin/*" element={<AdminDashboard />} />

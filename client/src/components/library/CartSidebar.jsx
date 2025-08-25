@@ -1,3 +1,7 @@
+// LIBRARY FEATURE - COMMENTED OUT FOR MVP
+// TODO: Uncomment when library feature is needed in future release
+
+/*
 /* eslint-disable no-unused-vars */
 import { AnimatePresence, motion } from "framer-motion";
 import {
@@ -398,4 +402,9 @@ const CartSidebar = () => {
   );
 };
 
+export default CartSidebar;
+*/
+
+// Empty component for MVP
+const CartSidebar = () => null;
 export default CartSidebar;

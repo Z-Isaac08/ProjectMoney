@@ -1,3 +1,7 @@
+// LIBRARY CONTROLLER - COMMENTED OUT FOR MVP
+// TODO: Uncomment when library feature is needed in future release
+
+/*
 const prisma = require('../lib/prisma');
 
 // CATEGORY CONTROLLERS
@@ -925,3 +929,7 @@ module.exports = {
   // Statistics
   getLibraryStats
 };
+*/
+
+// Empty exports for MVP
+module.exports = {};

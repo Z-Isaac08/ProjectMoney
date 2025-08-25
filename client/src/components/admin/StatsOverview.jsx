@@ -39,14 +39,15 @@ const StatsOverview = ({ data, loading }) => {
       icon: DollarSign,
       color: 'emerald'
     },
-    {
-      name: 'Livres Vendus',
-      value: data?.library?.booksSold || 0,
-      change: data?.library?.salesGrowth || 0,
-      changeType: data?.library?.salesGrowth >= 0 ? 'increase' : 'decrease',
-      icon: BookOpen,
-      color: 'purple'
-    },
+    // LIBRARY STATS COMMENTED OUT FOR MVP
+    // {
+    //   name: 'Livres Vendus',
+    //   value: data?.library?.booksSold || 0,
+    //   change: data?.library?.salesGrowth || 0,
+    //   changeType: data?.library?.salesGrowth >= 0 ? 'increase' : 'decrease',
+    //   icon: BookOpen,
+    //   color: 'purple'
+    // },
     {
       name: 'Événements Actifs',
       value: data?.events?.activeEvents || 0,

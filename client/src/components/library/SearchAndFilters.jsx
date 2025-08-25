@@ -1,3 +1,7 @@
+// LIBRARY FEATURE - COMMENTED OUT FOR MVP
+// TODO: Uncomment when library feature is needed in future release
+
+/*
 // eslint-disable-next-line no-unused-vars
 import { AnimatePresence, motion } from "framer-motion";
 import { Filter, Search, X, Book } from "lucide-react";
@@ -267,4 +271,9 @@ const SearchAndFilters = () => {
   );
 };
 
+export default SearchAndFilters;
+*/
+
+// Empty component for MVP
+const SearchAndFilters = () => null;
 export default SearchAndFilters;

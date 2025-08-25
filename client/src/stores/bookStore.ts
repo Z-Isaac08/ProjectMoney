@@ -1,3 +1,7 @@
+// LIBRARY FEATURE - COMMENTED OUT FOR MVP
+// TODO: Uncomment when library feature is needed in future release
+
+/*
 import { create } from "zustand";
 import { libraryAPI } from "../services/api";
 
@@ -537,3 +541,36 @@ export const useBookStore = create((set, get) => ({
     });
   },
 }));
+*/
+
+// Empty store for MVP
+export const useBookStore = () => ({
+  books: [],
+  categories: [],
+  selectedBooks: [],
+  loading: false,
+  error: null,
+  showCart: false,
+  initialize: () => {},
+  clearError: () => {},
+  addToCart: () => {},
+  removeFromCart: () => {},
+  toggleCart: () => {},
+  getCartCount: () => 0,
+  getCartTotal: () => 0,
+  clearCart: () => {},
+  createOrder: () => Promise.resolve({ id: 'test' }),
+  processPayment: () => Promise.resolve({ success: true }),
+  searchBooks: () => {},
+  filterByCategory: () => {},
+  fetchBooks: () => {},
+  goToPage: () => {},
+  nextPage: () => {},
+  prevPage: () => {},
+  setSearchQuery: () => {},
+  setSelectedCategory: () => {},
+  setSortBy: () => {},
+  setShowCart: () => {},
+  setShowFilters: () => {},
+  setFilters: () => {},
+});

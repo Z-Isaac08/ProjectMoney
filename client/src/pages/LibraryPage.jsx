@@ -1,3 +1,7 @@
+// LIBRARY FEATURE - COMMENTED OUT FOR MVP
+// TODO: Uncomment when library feature is needed in future release
+
+/*
 /* eslint-disable no-unused-vars */
 import { motion } from 'framer-motion'
 import { ArrowLeft, BookOpen, TrendingUp, Sparkles, AlertCircle } from 'lucide-react'
@@ -319,3 +323,8 @@ const LibraryPage = () => {
 }
 
 export default LibraryPage
+*/
+
+// Empty component for MVP
+const LibraryPage = () => <div>Library feature coming soon...</div>;
+export default LibraryPage;

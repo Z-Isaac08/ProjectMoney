@@ -158,19 +158,23 @@ export const useAdminStore = create((set, get) => ({
     }
   },
 
+  // LIBRARY STATS COMMENTED OUT FOR MVP
   // Actions pour la bibliothèque
+  // fetchLibraryStats: async () => {
+  //   try {
+  //     const response = await adminAPI.getLibraryStats();
+  //     set(state => ({
+  //       dashboardData: {
+  //         ...state.dashboardData,
+  //         library: response.data
+  //       }
+  //     }));
+  //   } catch (error) {
+  //     console.error('Erreur lors du chargement des stats bibliothèque:', error);
+  //   }
+  // },
   fetchLibraryStats: async () => {
-    try {
-      const response = await adminAPI.getLibraryStats();
-      set(state => ({
-        dashboardData: {
-          ...state.dashboardData,
-          library: response.data
-        }
-      }));
-    } catch (error) {
-      console.error('Erreur lors du chargement des stats bibliothèque:', error);
-    }
+    // Empty function for MVP
   },
 
   // Actions pour les statistiques financières

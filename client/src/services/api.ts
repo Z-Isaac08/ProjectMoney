@@ -1,4 +1,6 @@
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
+import { ApiResponse, User, LoginFormData, RegisterFormData } from "../types/auth";
+import { DashboardData, UserManagement } from "../types/admin";
 
 const API_BASE_URL = "http://localhost:3001/api";
 
@@ -112,7 +114,8 @@ export const adminAPI = {
     params: { timeRange, metric } 
   }),
   getEventStats: () => api.get('/admin/events/stats'),
-  getLibraryStats: () => api.get('/admin/library/stats'),
+  // LIBRARY FEATURE COMMENTED OUT FOR MVP
+  // getLibraryStats: () => api.get('/admin/library/stats'),
   getFinancialStats: () => api.get('/admin/financial/stats'),
   updateSystemConfig: (config) => api.patch('/admin/system/config', config),
   sendNotification: (notification) => api.post('/admin/notifications', notification),
@@ -121,6 +124,10 @@ export const adminAPI = {
   generateReport: (type, period) => api.post('/admin/reports/generate', { type, period })
 };
 
+// LIBRARY API FUNCTIONS - COMMENTED OUT FOR MVP
+// TODO: Uncomment when library feature is needed in future release
+
+/*
 // Library API functions
 export const libraryAPI = {
   // Categories
@@ -216,5 +223,9 @@ export const libraryAPI = {
   getPaymentStatus: (orderId) => 
     api.get(`/library/orders/${orderId}/payment/status`)
 };
+*/
+
+// Empty library API for MVP
+export const libraryAPI = {};
 
 export default api;

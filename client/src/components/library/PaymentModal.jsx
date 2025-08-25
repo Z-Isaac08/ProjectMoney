@@ -1,3 +1,7 @@
+// LIBRARY FEATURE - COMMENTED OUT FOR MVP
+// TODO: Uncomment when library feature is needed in future release
+
+/*
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, CreditCard, Shield, Lock, CheckCircle } from 'lucide-react'
@@ -298,3 +302,8 @@ const PaymentModal = ({ isOpen, onClose, totalAmount, onPayment, loading }) => {
 }
 
 export default PaymentModal
+*/
+
+// Empty component for MVP
+const PaymentModal = () => null;
+export default PaymentModal;

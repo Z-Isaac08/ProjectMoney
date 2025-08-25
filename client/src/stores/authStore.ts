@@ -1,7 +1,26 @@
 import { create } from "zustand";
 import { authAPI } from "../services/api";
+import { User, AuthState, LoginFormData, RegisterFormData, ApiResponse } from "../types/auth";
 
-export const useAuthStore = create((set, get) => ({
+interface AuthStoreState extends AuthState {
+  authState: "logged_out" | "awaiting_2fa" | "logged_in";
+  userEmail: string;
+  tempToken: string;
+  initialized: boolean;
+  setLoading: (loading: boolean) => void;
+  setError: (error: string | null) => void;
+  clearError: () => void;
+  login: (email: string, password: string) => Promise<void>;
+  register: (userData: RegisterFormData) => Promise<void>;
+  verify2FA: (code: string) => Promise<void>;
+  resend2FA: () => Promise<void>;
+  getCurrentUser: () => Promise<void>;
+  logout: () => Promise<void>;
+  initAuth: () => Promise<void>;
+  reset: () => void;
+}
+
+export const useAuthStore = create<AuthStoreState>((set, get) => ({
   // États d'authentification
   authState: "logged_out", // 'logged_out' | 'awaiting_2fa' | 'logged_in'
   userEmail: "",

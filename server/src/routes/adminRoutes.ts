@@ -1,4 +1,5 @@
-const express = require('express');
+import express from 'express';
+import { Request, Response } from 'express';
 const {
   getDashboardStats,
   getUsers,
@@ -34,4 +35,4 @@ router.get('/system/health', authLimiter, getSystemHealth);
 // Routes d'analytics
 router.get('/analytics', authLimiter, getAnalytics);
 
-module.exports = router;
+export default router;

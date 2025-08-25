@@ -1,3 +1,7 @@
+// LIBRARY FEATURE - COMMENTED OUT FOR MVP
+// TODO: Uncomment when library feature is needed in future release
+
+/*
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion'
 import { ArrowLeft, BookOpen, Download, Search, Calendar, Eye } from 'lucide-react'
@@ -55,7 +59,6 @@ const MyBooksPage = () => {
 
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Header */}
       <div className="sticky top-0 bg-black/95 backdrop-blur-sm z-30 border-b border-gray-800">
         <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex items-center justify-between mb-6">
@@ -78,7 +81,6 @@ const MyBooksPage = () => {
             </div>
           </div>
 
-          {/* Barre de recherche */}
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             <input
@@ -92,7 +94,6 @@ const MyBooksPage = () => {
         </div>
       </div>
 
-      {/* Contenu principal */}
       <div className="max-w-7xl mx-auto px-4 py-8">
         {loading && (
           <div className="flex justify-center items-center py-20">
@@ -143,7 +144,6 @@ const MyBooksPage = () => {
                 transition={{ delay: index * 0.1 }}
                 className="bg-gray-900/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-800/50 hover:border-gray-700 transition-all duration-300 hover:shadow-2xl hover:shadow-primary-500/10"
               >
-                {/* Image */}
                 <div className="relative">
                   <img
                     src={book.coverImage}
@@ -152,7 +152,6 @@ const MyBooksPage = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                   
-                  {/* File type badge */}
                   <div className="absolute top-3 left-3">
                     <span className="bg-primary-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
                       {book.fileType}
@@ -160,7 +159,6 @@ const MyBooksPage = () => {
                   </div>
                 </div>
 
-                {/* Content */}
                 <div className="p-5 space-y-4">
                   <div className="space-y-2">
                     <h3 className="font-bold text-white text-lg leading-tight line-clamp-2">
@@ -169,7 +167,6 @@ const MyBooksPage = () => {
                     <p className="text-gray-400 text-sm font-medium">{book.author}</p>
                   </div>
 
-                  {/* Metadata */}
                   <div className="flex items-center justify-between text-xs text-gray-500">
                     <span className="flex items-center space-x-1">
                       <Calendar className="w-3 h-3" />
@@ -187,7 +184,6 @@ const MyBooksPage = () => {
                     {book.category.name}
                   </div>
 
-                  {/* Actions */}
                   <div className="flex space-x-2 pt-2">
                     <button
                       onClick={() => handleDownload(book)}
@@ -214,3 +210,8 @@ const MyBooksPage = () => {
 }
 
 export default MyBooksPage
+*/
+
+// Empty component for MVP
+const MyBooksPage = () => <div>My Books feature coming soon...</div>;
+export default MyBooksPage;

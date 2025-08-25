@@ -1,4 +1,9 @@
-const express = require('express');
+// LIBRARY ROUTES - COMMENTED OUT FOR MVP
+// TODO: Uncomment when library feature is needed in future release
+
+/*
+import express from 'express';
+import { Request, Response } from 'express';
 const {
   // Categories
   getCategories,
@@ -298,3 +303,9 @@ router.use((error, req, res, next) => {
 });
 
 module.exports = router;
+*/
+
+// Empty router for MVP
+import express from 'express';
+const router = express.Router();
+export default router;

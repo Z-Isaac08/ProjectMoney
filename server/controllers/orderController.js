@@ -1,3 +1,7 @@
+// ORDER CONTROLLER - COMMENTED OUT FOR MVP (Library Orders)
+// TODO: Uncomment when library feature is needed in future release
+
+/*
 const prisma = require('../lib/prisma');
 
 // ORDER CONTROLLERS
@@ -455,3 +459,7 @@ module.exports = {
   getPaymentStatus,
   getAllOrders
 };
+*/
+
+// Empty exports for MVP
+module.exports = {};

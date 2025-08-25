@@ -1,3 +1,7 @@
+// LIBRARY FEATURE - COMMENTED OUT FOR MVP
+// TODO: Uncomment when library feature is needed in future release
+
+/*
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 import { BookOpen, Check, ShoppingCart, Star } from "lucide-react";
@@ -36,7 +40,6 @@ const BookCard = ({ book, index }) => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="bg-gray-900/40 rounded-2xl border border-gray-800 hover:border-gray-700 transition-all duration-300 overflow-hidden hover:shadow-xl">
-        {/* Image section */}
         <div className="relative">
           <img
             src={book.coverImage || book.cover}
@@ -58,7 +61,6 @@ const BookCard = ({ book, index }) => {
           )}
         </div>
 
-        {/* Info section */}
         <div className="p-4 space-y-3">
           <h3 className="text-white font-bold text-lg leading-tight line-clamp-2 hover:text-primary-400 transition">
             {book.title}
@@ -129,4 +131,9 @@ const BookCard = ({ book, index }) => {
   );
 };
 
+export default BookCard;
+*/
+
+// Empty component for MVP
+const BookCard = () => null;
 export default BookCard;

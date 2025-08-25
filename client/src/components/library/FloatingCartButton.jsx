@@ -1,3 +1,7 @@
+// LIBRARY FEATURE - COMMENTED OUT FOR MVP
+// TODO: Uncomment when library feature is needed in future release
+
+/*
 import { motion, AnimatePresence } from 'framer-motion'
 import { ShoppingCart, X } from 'lucide-react'
 import { useBookStore } from '../../stores/bookStore'
@@ -58,4 +62,9 @@ const FloatingCartButton = () => {
   )
 }
 
+export default FloatingCartButton;
+*/
+
+// Empty component for MVP
+const FloatingCartButton = () => null;
 export default FloatingCartButton;

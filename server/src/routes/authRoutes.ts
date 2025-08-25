@@ -1,24 +1,16 @@
-const express = require('express');
-const {
-  checkEmail,
-  loginExistingUser,
-  registerNewUser,
-  verify2FA,
-  resend2FA,
-  getCurrentUser,
-  logout,
-  refreshToken
-} = require('../controllers/authController');
-const { protect, requireVerified, cleanupExpiredSessions } = require('../middleware/auth');
-const { validate } = require('../middleware/validation');
-const { authLimiter, strictAuthLimiter } = require('../middleware/security');
-const {
+import express from 'express';
+import type { Request, Response } from 'express';
+import {
   checkEmailSchema,
   loginSchema,
   registerSchema,
   verify2FASchema,
   resend2FASchema
-} = require('../schemas/authSchemas');
+} from '../schemas/authSchemas';
+import * as authController from '../controllers/authController';
+import { protect, requireVerified, cleanupExpiredSessions } from '../middleware/auth';
+import { validate } from '../middleware/validation';
+import { authLimiter, strictAuthLimiter } from '../middleware/security';
 
 const router = express.Router();
 
@@ -29,47 +21,47 @@ router.use(cleanupExpiredSessions);
 router.post('/check-email', 
   authLimiter, 
   validate(checkEmailSchema), 
-  checkEmail
+  authController.checkEmail
 );
 
 router.post('/login', 
   authLimiter, 
   validate(loginSchema), 
-  loginExistingUser
+  authController.loginExistingUser
 );
 
 router.post('/register', 
   strictAuthLimiter, 
   validate(registerSchema), 
-  registerNewUser
+  authController.registerNewUser
 );
 
 router.post('/verify-2fa', 
   strictAuthLimiter, 
   validate(verify2FASchema), 
-  verify2FA
+  authController.verify2FA
 );
 
 router.post('/resend-2fa', 
   authLimiter, 
   validate(resend2FASchema), 
-  resend2FA
+  authController.resend2FA
 );
 
 router.post('/refresh', 
   authLimiter, 
-  refreshToken
+  authController.refreshToken
 );
 
 // Protected routes
 router.get('/me', 
   protect, 
-  getCurrentUser
+  authController.getCurrentUser
 );
 
 router.post('/logout', 
   protect, 
-  logout
+  authController.logout
 );
 
 // Admin only routes (example)
@@ -130,4 +122,4 @@ router.delete('/sessions/:sessionId',
   }
 );
 
-module.exports = router;
+export default router;
